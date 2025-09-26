@@ -8,29 +8,30 @@ namespace Lab_4
 {
     internal class Circle
     {
-        public Circle(int radius) //constructor that requires an integer value for radius
+        public int Radius { get; set; } //property
+
+
+        public Circle(int radius) //constructor that requires an integer value for Radius
         {
             Radius = radius;
         }
 
-        public int Radius { get; set; }
-        
         //method to calculate area
-        public static double GetArea(int radius)
+        public double GetArea()
         {
-            return radius * radius * Math.PI;
+            return Radius * Radius * Math.PI;
         }
 
         //method to calculate circumference
-        public static double GetCircumference(int radius)
+        public double GetCircumference()
         {
-            return 2 * radius * Math.PI;
+            return 2 * Radius * Math.PI;
         }
 
         //method to calculate volume
-        public static double GetVolume(int radius)
+        public double GetVolume()
         {
-            return (4 * Math.PI *  (radius ^ 3)) / 3;
+            return (4 * Math.PI *  (Radius ^ 3)) / 3;
         }
 
     }
